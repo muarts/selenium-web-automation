@@ -83,7 +83,6 @@ public class ProductsPageTest extends TestBase {
      * Randomly select one of six products on the products page,
      * then verify that the selected product matches the one in the cart.
      * */
-
     @Test
     public void testAddProductToTheCart() {
         ProductsPage productsPage = new ProductsPage(driver);
