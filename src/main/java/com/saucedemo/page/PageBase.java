@@ -1,9 +1,6 @@
 package com.saucedemo.page;
 
-import org.openqa.selenium.By;
-import org.openqa.selenium.Cookie;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
+import org.openqa.selenium.*;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
@@ -61,6 +58,14 @@ public class PageBase {
         return elements.stream()
                 .map(this::getText)
                 .collect(Collectors.toList());
+    }
+
+    public boolean isDisplayed(By locator) {
+        try {
+            return wait.until(ExpectedConditions.visibilityOfElementLocated(locator)).isDisplayed();
+        } catch (TimeoutException te) {
+            return false;
+        }
     }
 
 }

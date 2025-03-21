@@ -15,9 +15,15 @@ public class ProductsPage extends PageBase {
     private final By productsSortLowToHighOption = By.cssSelector("[value=\"lohi\"]");
     private final By productsSortHighToLowOption = By.cssSelector("[value=\"hilo\"]");
     private final By productPrices = By.cssSelector("[data-test='inventory-item-price']");
+    private final By shoppingCartButton = By.id("shopping_cart_container");
 
     public ProductsPage(WebDriver driver) {
         super(driver);
+    }
+
+    public CartPage clickShoppingCardButton() {
+        click(shoppingCartButton);
+        return new CartPage(driver);
     }
 
     public String getTextOfPageTitle() {

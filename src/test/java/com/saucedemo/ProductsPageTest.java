@@ -1,10 +1,13 @@
 package com.saucedemo;
 
+import com.saucedemo.page.CartPage;
 import com.saucedemo.page.ProductsPage;
 import org.testng.annotations.Test;
 
 import java.util.Collections;
 import java.util.List;
+
+import static com.saucedemo.CommonConstant.CART_PAGE_TITLE;
 import static com.saucedemo.CommonConstant.PRODUCTS_PAGE_PATH;
 import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.Matchers.*;
@@ -62,5 +65,15 @@ public class ProductsPageTest extends TestBase {
                 .toList();
 
         assertThat(pricesOfAllProductsListed, is(equalTo(highToLowSortedProducts)));
+    }
+
+    @Test
+    public void testNavigateToTheCartPageWithCartButton() {
+        ProductsPage productsPage = new ProductsPage(driver);
+        productsPage.bypassLoginAndGetHere(PRODUCTS_PAGE_PATH);
+        CartPage cartPage = productsPage.clickShoppingCardButton();
+
+        assertThat(cartPage.getTextOfCartPageTitle(), is(equalTo(CART_PAGE_TITLE)));
+        assertThat(cartPage.checkoutAndContinueShoppingButtonsAreDisplayed(), is(equalTo(Boolean.TRUE)));
     }
 }
