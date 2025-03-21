@@ -65,7 +65,7 @@ public class ProductsPage extends PageBase {
     }
 
     public Product addProductToTheCart() {
-        WebElement productDescriptionElement = findElements(productDescription).get(getRandomNumber(0, 5));
+        WebElement productDescriptionElement = findElements(productDescription).get(getRandomNumber(6));
         WebElement addToCart = findElement(productDescriptionElement).findElement(addToCartButton);
         addToCart.click();
         Product product = new Product();

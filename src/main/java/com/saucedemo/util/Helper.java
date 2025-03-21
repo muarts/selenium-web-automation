@@ -10,9 +10,9 @@ public class Helper {
         return RandomStringUtils.randomAlphanumeric(10);
     }
 
-    public static int getRandomNumber(int min, int max) {
+    public static int getRandomNumber(int max) {
         Random random = new Random();
-        return random.nextInt(max) + min;
+        return random.nextInt(max);
     }
 
 }
