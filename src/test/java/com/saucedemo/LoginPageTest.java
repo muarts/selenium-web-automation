@@ -14,7 +14,7 @@ public class LoginPageTest extends TestBase {
     @Test
     public void testLogin() {
         LoginPage loginPage = new LoginPage(driver);
-        ProductsPage productsPage = loginPage.login(VALID_USERNAME, VALID_PASSWORD);
+        ProductsPage productsPage = loginPage.login(STANDARD_USER_USERNAME, VALID_PASSWORD);
         assertThat(productsPage.getTextOfPageTitle(), is(equalTo(PRODUCTS_PAGE_TITLE)));
     }
 

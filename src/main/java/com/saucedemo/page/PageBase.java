@@ -1,12 +1,18 @@
 package com.saucedemo.page;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.Cookie;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.time.Duration;
+import java.util.List;
+import java.util.stream.Collectors;
+
+import static com.saucedemo.CommonConstant.PROD_URL;
+import static com.saucedemo.CommonConstant.STANDARD_USER_USERNAME;
 
 public class PageBase {
 
@@ -22,6 +28,10 @@ public class PageBase {
         return wait.until(ExpectedConditions.visibilityOfElementLocated(locator));
     }
 
+    public WebElement findElement(WebElement element) {
+        return wait.until(ExpectedConditions.visibilityOf(element));
+    }
+
     public void click(By locator) {
         wait.until(ExpectedConditions.elementToBeClickable(locator))
                 .click();
@@ -30,6 +40,27 @@ public class PageBase {
     public String getText(By locator) {
         return findElement(locator)
                 .getText();
+    }
+
+    public void bypassLoginAndGetHere(String path) {
+        driver.manage().addCookie(new Cookie("session-username", STANDARD_USER_USERNAME));
+        driver.get(PROD_URL + path);
+    }
+
+    public String getText(WebElement element) {
+        return findElement(element)
+                .getText();
+    }
+
+    public List<WebElement> findElements(By locator) {
+        return wait.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(locator));
+    }
+
+    public List<String> getTextsOfAllElements(By locator) {
+        List<WebElement> elements = findElements(locator);
+        return elements.stream()
+                .map(this::getText)
+                .collect(Collectors.toList());
     }
 
 }
