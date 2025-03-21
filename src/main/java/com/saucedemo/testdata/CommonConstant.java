@@ -1,4 +1,4 @@
-package com.saucedemo;
+package com.saucedemo.testdata;
 
 public class CommonConstant {
     public static final String PROD_URL = "https://www.saucedemo.com";

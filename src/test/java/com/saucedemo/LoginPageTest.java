@@ -5,7 +5,7 @@ import com.saucedemo.page.ProductsPage;
 import com.saucedemo.util.DataProviders;
 import org.testng.annotations.Test;
 
-import static com.saucedemo.CommonConstant.*;
+import static com.saucedemo.testdata.CommonConstant.*;
 import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.Matchers.*;
 

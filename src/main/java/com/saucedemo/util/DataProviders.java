@@ -2,8 +2,8 @@ package com.saucedemo.util;
 
 import org.testng.annotations.DataProvider;
 
-import static com.saucedemo.CommonConstant.VALID_PASSWORD;
-import static com.saucedemo.CommonConstant.STANDARD_USER_USERNAME;
+import static com.saucedemo.testdata.CommonConstant.VALID_PASSWORD;
+import static com.saucedemo.testdata.CommonConstant.STANDARD_USER_USERNAME;
 import static com.saucedemo.util.Helper.getRandomString;
 
 public class DataProviders {

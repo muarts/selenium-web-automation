@@ -7,7 +7,7 @@ import org.openqa.selenium.chrome.ChromeOptions;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 
-import static com.saucedemo.CommonConstant.PROD_URL;
+import static com.saucedemo.testdata.CommonConstant.PROD_URL;
 
 public class TestBase {
 

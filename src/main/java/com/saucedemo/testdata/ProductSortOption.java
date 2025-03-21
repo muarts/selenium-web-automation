@@ -1,4 +1,4 @@
-package com.saucedemo;
+package com.saucedemo.testdata;
 
 public enum ProductSortOption {
     NAME_Z_TO_A,

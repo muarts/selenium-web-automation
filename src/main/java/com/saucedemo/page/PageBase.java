@@ -8,8 +8,8 @@ import java.time.Duration;
 import java.util.List;
 import java.util.stream.Collectors;
 
-import static com.saucedemo.CommonConstant.PROD_URL;
-import static com.saucedemo.CommonConstant.STANDARD_USER_USERNAME;
+import static com.saucedemo.testdata.CommonConstant.PROD_URL;
+import static com.saucedemo.testdata.CommonConstant.STANDARD_USER_USERNAME;
 
 public class PageBase {
 
