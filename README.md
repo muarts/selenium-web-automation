@@ -1,1 +1,1 @@
-# Web automation using Selenium - Java with POM approach
+# Web automation using Selenium and Java with POM approach
