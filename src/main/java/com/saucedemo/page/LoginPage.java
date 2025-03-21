@@ -14,6 +14,10 @@ public class LoginPage extends PageBase {
         super(driver);
     }
 
+    public boolean loginButtonDisplayed() {
+        return isDisplayed(loginButton);
+    }
+
     public ProductsPage login(String username, String password) {
         findElement(usernameInput).sendKeys(username);
         findElement(passwordInput).sendKeys(password);
