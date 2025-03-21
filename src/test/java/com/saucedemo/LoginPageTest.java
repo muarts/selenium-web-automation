@@ -25,4 +25,12 @@ public class LoginPageTest extends TestBase {
 
         assertThat(errorLoginMessage, is(equalTo(ERROR_LOGIN_MESSAGE)));
     }
+
+    @Test
+    public void testLockedOutUser() {
+        LoginPage loginPage = new LoginPage(driver);
+        String errorLoginMessage = loginPage.loginError(LOCKED_OUT_USER_USERNAME, VALID_PASSWORD);
+
+        assertThat(errorLoginMessage, is(equalTo(ERROR_USER_LOCKED_OUT)));
+    }
 }
