@@ -44,7 +44,7 @@ public class ProductsPage extends PageBase {
     public List<Double> getPricesOfAllProductsListed() {
         List<String> stringPrices = getTextsOfAllElements(productPrice);
         return stringPrices.stream()
-                .map(priceElement -> priceElement.replace("$", "")) // Remove "$" symbol
+                .map(priceElement -> priceElement.replace("$", ""))
                 .map(Double::parseDouble)
                 .toList();
     }
