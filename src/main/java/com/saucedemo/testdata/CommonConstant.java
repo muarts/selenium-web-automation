@@ -10,4 +10,5 @@ public class CommonConstant {
     public static final String CART_PAGE_TITLE = "Your Cart";
     public static final String ERROR_LOGIN_MESSAGE = "Epic sadface: Username and password do not match any user in this service";
     public static final String ERROR_USER_LOCKED_OUT = "Epic sadface: Sorry, this user has been locked out.";
+    public static final String FOOTER_TEXT = "© 2025 Sauce Labs. All Rights Reserved. Terms of Service | Privacy Policy";
 }
