@@ -17,9 +17,18 @@ The following dependencies are used in this project:
 - And more (see the full list in the `pom.xml` file).
 
 ## Screenshots on test failures
+
 Whenever a test case fails, it takes screenshot for better bug inspection. Sample case below:
 
 ![testErrorMessageIsCorrect.png](readme_content/testErrorMessageIsCorrect.png)
 
-## Run tests
+## Reporting
+
+Allure is integrated for test reporting.
+
+![allure_report.png](readme_content/allure_report.png)
+
+## Run tests and generate report
 - Run tests > `mvn clean test`
+- Generate the Allure report > `mvn allure:report`
+- View the report in your browser > `allure serve target/allure-results`

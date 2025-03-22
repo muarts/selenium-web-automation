@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Testing SauceDemo.com">
+    <test name="Regression" thread-count="5">
+        <classes>
+            <class name="com.saucedemo.LoginPageTest"/>
+            <class name="com.saucedemo.FooterTest"/>
+            <class name="com.saucedemo.SideBarTest"/>
+            <class name="com.saucedemo.ProductsPageTest"/>
+        </classes>
+    </test>
+</suite>
