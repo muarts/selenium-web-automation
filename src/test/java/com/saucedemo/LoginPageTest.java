@@ -35,6 +35,7 @@ public class LoginPageTest extends TestBase {
         assertThat(errorLoginMessage, is(equalTo(ERROR_USER_LOCKED_OUT)));
     }
 
+    // intentional test failure to test screenshot feature whenever a test case fails.
     @Test
     public void testErrorMessageIsCorrect() {
         LoginPage loginPage = new LoginPage(driver);
